@@ -23,17 +23,35 @@
     <Compile Include="Sht21.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Iot.Device.CharacterLcd">
+      <HintPath>..\packages\nanoFramework.Iot.Device.CharacterLcd.1.1.364\lib\Iot.Device.CharacterLcd.dll</HintPath>
+    </Reference>
     <Reference Include="Iot.Device.Common.WeatherHelper">
       <HintPath>..\packages\nanoFramework.Iot.Device.Common.WeatherHelper.1.2.473\lib\Iot.Device.Common.WeatherHelper.dll</HintPath>
     </Reference>
+    <Reference Include="Iot.Device.Multiplexing">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Multiplexing.1.2.423\lib\Iot.Device.Multiplexing.dll</HintPath>
+    </Reference>
+    <Reference Include="Iot.Device.Pcd8544">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Pcd8544.1.0.370\lib\Iot.Device.Pcd8544.dll</HintPath>
+    </Reference>
+    <Reference Include="Iot.Device.ShiftRegister">
+      <HintPath>..\packages\nanoFramework.Iot.Device.ShiftRegister.1.2.424\lib\Iot.Device.ShiftRegister.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.15.5\lib\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.Graphics.Core">
+      <HintPath>..\packages\nanoFramework.Graphics.Core.1.2.4\lib\nanoFramework.Graphics.Core.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Hardware.Esp32">
       <HintPath>..\packages\nanoFramework.Hardware.Esp32.1.6.12\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Hardware.Esp32.Rmt">
       <HintPath>..\packages\nanoFramework.Hardware.Esp32.Rmt.2.0.7\lib\nanoFramework.Hardware.Esp32.Rmt.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.ResourceManager">
+      <HintPath>..\packages\nanoFramework.ResourceManager.1.2.19\lib\nanoFramework.ResourceManager.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Runtime.Events">
       <HintPath>..\packages\nanoFramework.Runtime.Events.1.11.15\lib\nanoFramework.Runtime.Events.dll</HintPath>
@@ -43,6 +61,9 @@
     </Reference>
     <Reference Include="nanoFramework.System.Collections">
       <HintPath>..\packages\nanoFramework.System.Collections.1.5.31\lib\nanoFramework.System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.System.Runtime">
+      <HintPath>..\packages\nanoFramework.System.Runtime.1.0.6\lib\nanoFramework.System.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.System.Text">
       <HintPath>..\packages\nanoFramework.System.Text.1.2.54\lib\nanoFramework.System.Text.dll</HintPath>
@@ -59,11 +80,23 @@
     <Reference Include="System.Device.Model">
       <HintPath>..\packages\nanoFramework.System.Device.Model.1.2.418\lib\System.Device.Model.dll</HintPath>
     </Reference>
+    <Reference Include="System.Device.Pwm">
+      <HintPath>..\packages\nanoFramework.System.Device.Pwm.1.1.10\lib\System.Device.Pwm.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device.Spi">
+      <HintPath>..\packages\nanoFramework.System.Device.Spi.1.3.43\lib\System.Device.Spi.dll</HintPath>
+    </Reference>
     <Reference Include="System.Device.Wifi">
       <HintPath>..\packages\nanoFramework.System.Device.Wifi.1.5.76\lib\System.Device.Wifi.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Stopwatch">
       <HintPath>..\packages\nanoFramework.System.Diagnostics.Stopwatch.1.2.418\lib\System.Diagnostics.Stopwatch.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>..\packages\nanoFramework.System.Drawing.1.2.418\lib\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>..\packages\nanoFramework.System.IO.FileSystem.1.1.32\lib\System.IO.FileSystem.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Ports">
       <HintPath>..\packages\nanoFramework.System.IO.Ports.1.1.78\lib\System.IO.Ports.dll</HintPath>
@@ -91,6 +124,9 @@
     </Reference>
     <Reference Include="UnitsNet.Temperature">
       <HintPath>..\packages\UnitsNet.nanoFramework.Temperature.5.43.0\lib\UnitsNet.Temperature.dll</HintPath>
+    </Reference>
+    <Reference Include="UnitsNet.VolumeConcentration">
+      <HintPath>..\packages\UnitsNet.nanoFramework.VolumeConcentration.5.42.0\lib\UnitsNet.VolumeConcentration.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

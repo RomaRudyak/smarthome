@@ -12,6 +12,8 @@ This is Pet-project for building SmartHome Components by using [nanoframework](h
 
 ## Pin wiring
 
+![./images/temp-humid-lcd.png](./images/temp-humid-lcd.png)
+
 **SHT21 (HTU21)**
 |ESP32-WROOM-32|SHT21|
 |---|---|

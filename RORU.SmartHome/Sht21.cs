@@ -18,6 +18,9 @@ namespace RORU.SmartHome
         /// </summary>
         public const int I2cAddress = 0x40;
 
+        public static Temperature TemperatureUndefined = default;
+        public static RelativeHumidity HumidityUndefined = default;
+
         private const int CmdReadTempreture = 0xF3;
         private const int CmdReadHumidity = 0xF5;
 
@@ -59,7 +62,7 @@ namespace RORU.SmartHome
                 ReadData(CmdReadTempreture);
                 return IsLastReadSuccessful
                     ? GetTemperature(_readBuff)
-                    : Temperature.Zero;
+                    : TemperatureUndefined;
             }
         }
 
@@ -77,7 +80,7 @@ namespace RORU.SmartHome
                 ReadData(CmdReadHumidity);
                 return IsLastReadSuccessful
                     ? GetHumidity(_readBuff)
-                    : RelativeHumidity.Zero;
+                    : HumidityUndefined;
             }
         }
 

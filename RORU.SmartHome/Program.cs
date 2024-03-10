@@ -12,16 +12,12 @@ using nanoFramework.Hardware.Esp32;
 using RORU.SmartHome;
 
 const int sleepTime = 60 * 1000;
-//const int sleepTime = 1000;
 
 Configuration.SetPinFunction(Gpio.IO21, DeviceFunction.I2C1_DATA);
 Configuration.SetPinFunction(Gpio.IO22, DeviceFunction.I2C1_CLOCK);
 
 Configuration.SetPinFunction(Gpio.IO18, DeviceFunction.SPI1_CLOCK);
 Configuration.SetPinFunction(Gpio.IO23, DeviceFunction.SPI1_MOSI);
-
-var dataCommandPin = Gpio.IO04;
-var resetPin = Gpio.IO19;
 
 SpiConnectionSettings spiConnectionSettings = new(1, 5)
 {
@@ -32,7 +28,13 @@ SpiConnectionSettings spiConnectionSettings = new(1, 5)
 };
 var spiDevice = new SpiDevice(spiConnectionSettings);
 
-Pcd8544 lcd = new(dataCommandPin, spiDevice, resetPin, -1, null, false)
+Pcd8544 lcd = new(
+    dataCommandPin: Gpio.IO04,
+    spiDevice: spiDevice,
+    resetPin: Gpio.IO19,
+    backlightPin: -1,
+    gpioController: null,
+    shouldDispose: false)
 {
     Enabled = true
 };
@@ -45,6 +47,11 @@ while (true)
     try
     {
         ClearOutput();
+
+        if (sensor.Temperature.Equals(Sht21.TemperatureUndefined))
+        {
+            continue;
+        }
 
         var temp = sensor.Temperature.DegreesCelsius;
         var hum = sensor.Humidity.Percent;

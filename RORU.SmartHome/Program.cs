@@ -81,11 +81,11 @@ bool IsTempGood(double temp) => temp >= 18 && temp <= 22;
 void WriteLine(string line = null)
 {
     var v = line ?? string.Empty;
-    lcd.WriteLine(v);
+    lcd?.WriteLine(v);
     Debug.WriteLine(v);
 }
 
 void ClearOutput()
 {
-    lcd.Clear();
+    lcd?.Clear();
 }
